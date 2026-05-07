@@ -20,6 +20,7 @@ jobs:
     steps:
       - name: "Install required packages"
         run: |
+          dnf config-manager disable fedora-cisco-openh264
           dnf install --assumeyes --refresh --allowerasing \
             --no-docs --setopt=tsflags=nodocs \
             --setopt=install_weak_deps=False \
