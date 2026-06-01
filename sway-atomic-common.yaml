@@ -20,3 +20,5 @@ exclude-packages:
   - tinysparql
   # Can only be excluded on variants that do not include GNOME Software
   - PackageKit-glib
+  # Do not include Qt5 from recommends
+  - qt5-qtbase

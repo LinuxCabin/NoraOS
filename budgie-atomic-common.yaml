@@ -30,3 +30,5 @@ exclude-packages:
   - plasma-discover-offline-updates
   - plasma-discover-packagekit
   - plasma-pk-updates
+  # Do not include Qt5 from recommends
+  - qt5-qtbase
