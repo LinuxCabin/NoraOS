@@ -178,8 +178,9 @@ The goal is to eventually use a similar CI pipeline-centric flow, with signing a
 
 ## Syncing with Fedora Comps
 
-[Fedora Comps](https://forge.fedoraproject.org/releng/fedora-comps) are "XML files used by various
-Fedora tools to perform grouping of packages into functional groups."
+[Fedora Comps](https://forge.fedoraproject.org/releng/fedora-comps.git) are
+"XML files used by various Fedora tools to perform grouping of packages into
+functional groups."
 
 Changes to the comps files need to be regularly propagated to this repo so that
 the Fedora Atomic variants are kept updated with the other desktop variants.
