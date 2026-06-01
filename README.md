@@ -26,8 +26,11 @@ In the Fedora infrastructure, composes are made via
 - for stable releases:
   [forge.fedoraproject.org/infra/ansible](https://forge.fedoraproject.org/infra/ansible/src/branch/main/roles/bodhi2/backend/templates/pungi.rpm.conf.j2)
 
-Installer ISOs are built using [Lorax](https://github.com/weldr/lorax) and
-additional templates:
+Starting with Fedora 45, installer ISOs are built using
+[image-builder](https://fedoraproject.org/wiki/Changes/BuildAtomicDesktopsWithImageBuilder).
+
+For Fedora 44 and earlier, installer ISOs are built using
+[Lorax](https://github.com/weldr/lorax) and additional templates:
 [pagure.io/fedora-lorax-templates](https://pagure.io/fedora-lorax-templates).
 
 ## Getting started
