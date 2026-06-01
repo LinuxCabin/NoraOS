@@ -19,7 +19,7 @@ Each variant is described in a YAML
 rpm-ostree to compose an ostree commit or OCI image with the package requested.
 
 In the Fedora infrastructure, composes are made via
-[pungi](https://pagure.io/pungi) with the configuration from:
+[pungi](https://forge.fedoraproject.org/pungi/pungi) with the configuration from:
 
 - for Rawhide and branched composes:
   [forge.fedoraproject.org/releng/pungi-fedora](https://forge.fedoraproject.org/releng/pungi-fedora)
@@ -147,7 +147,7 @@ There are a few different ways Fedora Atomic Desktop images are currently produc
 This is the traditional method for creating the official Fedora Atomic Desktops.
 
 - **Source Repository**: `workstation-ostree-config` (this repository)
-- **Compose Tool**: Fedora's official [Pungi](https://pagure.io/pungi) composer.
+- **Compose Tool**: Fedora's official [Pungi](https://forge.fedoraproject.org/pungi/pungi) composer.
 - **Output Type**: A classic OSTree commit.
 - **Details**: This is the standard, officially supported output that is used to deliver updates to users.
 
@@ -156,7 +156,7 @@ This is the traditional method for creating the official Fedora Atomic Desktops.
 Fedora infrastructure also produces OCI (bootable container) images from the manifests in this repository.
 
 - **Source Repository**: `workstation-ostree-config` (this repository)
-- **Compose Tool**: Fedora's official [Pungi](https://pagure.io/pungi) composer.
+- **Compose Tool**: Fedora's official [Pungi](https://forge.fedoraproject.org/pungi/pungi) composer.
 - **Output Type**: An OCI container image.
 - **Output Location**: `quay.io/fedora/fedora-<variant_name>` (e.g., `quay.io/fedora/fedora-silverblue`)
 - **Details**: These official images are unsigned and do not have historical tags (e.g., `40.20240422.0`).
