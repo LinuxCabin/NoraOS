@@ -36,4 +36,4 @@ jobs:
         uses: https://code.forgejo.org/actions/checkout@v6
 
       - name: "Verify that the comps and manifests are synced"
-        run: just comps-sync-check
+        run: just comps --checkonly

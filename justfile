@@ -96,52 +96,34 @@ branch:
     git add *.yaml
     git commit -m "Update configs for branch f${version}"
 
-
-# Comps-sync, but without pulling latest
-sync:
+# Sync the manifests with the content from the Fedora comps repo
+# Use a shallow clone, pull latest changes and save the result by default
+[arg("checkonly", short="c", long="checkonly", value="true"), arg("nopull", short="n", long="nopull", value="true")]
+comps checkonly="false" nopull="false":
     #!/bin/bash
     set -euo pipefail
 
     if [[ ! -d fedora-comps ]]; then
-        git clone https://forge.fedoraproject.org/releng/fedora-comps.git
-    fi
-
-    version={{release_ver}}
-    ./comps-sync.py --save fedora-comps/comps-f${version}.xml.in
-
-# Sync the manifests with the content of the comps groups
-comps-sync:
-    #!/bin/bash
-    set -euo pipefail
-
-    if [[ ! -d fedora-comps ]]; then
-        git clone https://forge.fedoraproject.org/releng/fedora-comps.git
+        git clone --depth 1 https://forge.fedoraproject.org/releng/fedora-comps.git
     else
-        pushd fedora-comps > /dev/null || exit 1
-        git fetch
-        git reset --hard origin/main
-        popd > /dev/null || exit 1
+        if [[ "{{nopull}}" == "false" ]]; then
+            pushd fedora-comps > /dev/null || exit 1
+            if [[ "$(git rev-parse --is-shallow-repository)" == "true" ]]; then
+                git fetch --unshallow
+            else
+                git fetch
+            fi
+            git reset --hard origin/main
+            popd > /dev/null || exit 1
+        fi
     fi
 
-    version={{release_ver}}
-    ./comps-sync.py --save fedora-comps/comps-f${version}.xml.in
-
-# Check if the manifests are in sync with the content of the comps groups
-comps-sync-check:
-    #!/bin/bash
-    set -euo pipefail
-
-    if [[ ! -d fedora-comps ]]; then
-        git clone https://forge.fedoraproject.org/releng/fedora-comps.git
-    else
-        pushd fedora-comps > /dev/null || exit 1
-        git fetch
-        git reset --hard origin/main
-        popd > /dev/null || exit 1
+    save=""
+    if [[ "{{checkonly}}" == "false" ]]; then
+        save="--save"
     fi
-
     version={{release_ver}}
-    ./comps-sync.py fedora-comps/comps-f${version}.xml.in
+    ./comps-sync.py ${save} fedora-comps/comps-f${version}.xml.in
 
 # Output the processed manifest for a given variant (defaults to Silverblue)
 manifest variant="silverblue":
