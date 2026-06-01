@@ -175,7 +175,7 @@ The goal is to eventually use a similar CI pipeline-centric flow, with signing a
 
 ## Syncing with Fedora Comps
 
-[Fedora Comps](https://pagure.io/fedora-comps) are "XML files used by various
+[Fedora Comps](https://forge.fedoraproject.org/releng/fedora-comps) are "XML files used by various
 Fedora tools to perform grouping of packages into functional groups."
 
 Changes to the comps files need to be regularly propagated to this repo so that
@@ -194,7 +194,7 @@ generated.
 
 If you don't have `just` installed or want to run the `comps-sync.py` script
 directly, you need to have an up-to-date `git` checkout of
-https://pagure.io/fedora-comps and a `git` checkout of this repository.
+https://forge.fedoraproject.org/releng/fedora-comps and a `git` checkout of this repository.
 
 Using the `comps-sync.py` script, provide the updated input XML file to examine
 the changes as a dry-run:

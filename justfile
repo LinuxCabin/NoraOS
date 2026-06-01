@@ -103,7 +103,7 @@ sync:
     set -euo pipefail
 
     if [[ ! -d fedora-comps ]]; then
-        git clone https://pagure.io/fedora-comps.git
+        git clone https://forge.fedoraproject.org/releng/fedora-comps.git
     fi
 
     version={{release_ver}}
@@ -115,7 +115,7 @@ comps-sync:
     set -euo pipefail
 
     if [[ ! -d fedora-comps ]]; then
-        git clone https://pagure.io/fedora-comps.git
+        git clone https://forge.fedoraproject.org/releng/fedora-comps.git
     else
         pushd fedora-comps > /dev/null || exit 1
         git fetch
@@ -132,7 +132,7 @@ comps-sync-check:
     set -euo pipefail
 
     if [[ ! -d fedora-comps ]]; then
-        git clone https://pagure.io/fedora-comps.git
+        git clone https://forge.fedoraproject.org/releng/fedora-comps.git
     else
         pushd fedora-comps > /dev/null || exit 1
         git fetch
