@@ -187,12 +187,12 @@ the Fedora Atomic variants are kept updated with the other desktop variants.
 
 ### Using `just`
 
-If you have the `just` command installed, you can run `just comps-sync` from a
-`git` checkout of this repo to update the packages included in the Fedora Atomic
+If you have the `just` command installed, you can run `just comps` from a `git`
+checkout of this repo to update the packages included in the Fedora Atomic
 variants. Examine the changes and cross-reference them with PRs made to the
-`fedora-comps` repo. Create a pull request with the changes and note any PRs from
-`fedora-comps` in the commit message that are relevant to the changes you have
-generated.
+`fedora-comps` repo. Create a pull request with the changes and note any PRs
+from `fedora-comps` in the commit message that are relevant to the changes you
+have generated.
 
 ### Using `comps-sync.py` directly
 
