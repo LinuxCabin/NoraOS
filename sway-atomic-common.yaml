@@ -11,8 +11,9 @@ include:
   - common.yaml
   - packages/sway-atomic.yaml
 
+# Make sure the following are not pulled in when Recommended by other packages
 exclude-packages:
-  # nothing in the tree would use these
+  # Nothing in the tree would use these
   - tracker
   - tracker-miners
   - localsearch
