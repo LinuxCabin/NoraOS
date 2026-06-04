@@ -20,21 +20,6 @@ pretty_names := '(
     [cosmic-atomic]="COSMIC Atomic"
 )'
 
-# subset of the map from https://pagure.io/pungi-fedora/blob/main/f/general.conf
-volume_id_substitutions := '(
-    [silverblue]="SB"
-    [kinoite]="Kin"
-    [kinoite-nightly]="Kin"
-    [kinoite-beta]="Kin"
-    [kinoite-mobile]="Kin"
-    [sway-atomic]="SwA"
-    [budgie-atomic]="BdA"
-    [xfce-atomic]="XfA"
-    [lxqt-atomic]="LxA"
-    [base-atomic]="BsA"
-    [cosmic-atomic]="CSMCA"
-)'
-
 # Define a 'release_ver' shortcut for use in recipes
 release_ver := '''
 "$(rpm-ostree compose tree --print-only "silverblue.yaml" | jq -r '."mutate-os-release"')"
