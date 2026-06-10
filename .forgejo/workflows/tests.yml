@@ -16,7 +16,7 @@ concurrency:
 
 jobs:
   testing-farm:
-    runs-on: "docker-slim"
+    runs-on: "testing-farm"
     steps:
       - uses: https://forge.fedoraproject.org/ci/testing-farm@main
         with:
