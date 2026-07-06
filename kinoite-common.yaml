@@ -1,0 +1,10 @@
+metadata:
+  summary: "Fedora Kinoite"
+
+variables:
+  variant: "kinoite"
+
+include:
+  - kinoite-shared.yaml
+  - common.yaml
+  - packages/kinoite.yaml
