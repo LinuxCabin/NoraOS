@@ -1,0 +1,11 @@
+name = "noraos"
+description = "NoraOS Kinoite Installer"
+version = "44.0.0"
+
+[customizations]
+installation_device = "/dev/sda"
+
+[customizations.ostree]
+ref = "fedora/rawhide/x86_64/kinoite"
+url = "file:///home/fang/NoraOS/repo"
+contenturl = "file:///home/fang/NoraOS/repo"

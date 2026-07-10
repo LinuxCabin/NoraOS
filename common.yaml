@@ -1,10 +1,10 @@
 edition: "2024"
-releasever: 45
+releasever: 44
 automatic-version-prefix: "${releasever}.<date:%Y%m%d>"
 mutate-os-release: "${releasever}"
 
 metadata:
-  license: MIT
+  license: Mozilla
 
 variables:
   # Default to Bootable Containers and override in classic ostree manifests

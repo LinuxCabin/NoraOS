@@ -17,8 +17,8 @@ variants=(
 )
 
 branch="$(git rev-parse --abbrev-ref HEAD)"
-release="$(rpm-ostree compose tree --print-only "silverblue.yaml" | jq -r '."mutate-os-release"')"
-if [[ "$(rpm-ostree compose tree --print-only "silverblue.yaml" | jq -r '.repos[]')" == "fedora-rawhide" ]]; then
+release="$(rpm-ostree compose tree --print-only "kinoite.yaml" | jq -r '."mutate-os-release"')"
+if [[ "$(rpm-ostree compose tree --print-only "kinoite.yaml" | jq -r '.repos[]')" == "fedora-rawhide" ]]; then
     release="rawhide"
 fi
 

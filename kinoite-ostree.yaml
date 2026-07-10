@@ -6,6 +6,11 @@ include:
 
 # Kept in the leaf manifest as they are overwritten by Pungi in composes
 repos:
-  - fedora-rawhide
-  # - fedora
-  # - updates
+  - fedora
+  - updates
+  - rpmfusion-nonfree
+  - rpmfusion-nonfree-updates
+  - rpmfusion-free
+  - rpmfusion-free-updates
+  - rpmfusion-nonfree-nvidia-driver
+  - rpmfusion-nonfree-steam

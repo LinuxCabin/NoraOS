@@ -1,20 +1,36 @@
-[fedora-rawhide]
-name=Fedora rawhide $basearch
-mirrorlist=https://mirrors.fedoraproject.org/metalink?repo=rawhide&arch=$basearch
-enabled=1
-gpgcheck=1
-metadata_expire=1d
-
 [fedora]
-name=Fedora $releasever $basearch
-metalink=https://mirrors.fedoraproject.org/metalink?repo=fedora-$releasever&arch=$basearch
+name=Fedora $releasever - $basearch
+baseurl=https://mirrors.cernet.edu.cn/fedora/releases/$releasever/Everything/$basearch/os/
+#metalink=https://mirrors.fedoraproject.org/metalink?repo=fedora-$releasever&arch=$basearch
 enabled=1
+countme=1
+metadata_expire=7d
+repo_gpgcheck=0
+type=rpm
 gpgcheck=1
-metadata_expire=1d
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-fedora-$releasever-$basearch
+skip_if_unavailable=False
 
-[updates]
-name=Fedora $releasever $basearch Updates
-metalink=https://mirrors.fedoraproject.org/metalink?repo=updates-released-f$releasever&arch=$basearch
-enabled=1
+[fedora-debuginfo]
+name=Fedora $releasever - $basearch - Debug
+baseurl=https://mirrors.cernet.edu.cn/fedora/releases/$releasever/Everything/$basearch/debug/tree/
+#metalink=https://mirrors.fedoraproject.org/metalink?repo=fedora-debug-$releasever&arch=$basearch
+enabled=0
+metadata_expire=7d
+repo_gpgcheck=0
+type=rpm
 gpgcheck=1
-metadata_expire=1d
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-fedora-$releasever-$basearch
+skip_if_unavailable=False
+
+[fedora-source]
+name=Fedora $releasever - Source
+baseurl=https://mirrors.cernet.edu.cn/fedora/releases/$releasever/Everything/source/tree/
+#metalink=https://mirrors.fedoraproject.org/metalink?repo=fedora-source-$releasever&arch=$basearch
+enabled=0
+metadata_expire=7d
+repo_gpgcheck=0
+type=rpm
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-fedora-$releasever-$basearch
+skip_if_unavailable=False

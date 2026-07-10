@@ -1,8 +1,8 @@
 metadata:
-  summary: "Fedora Base Atomic"
+  summary: "NoraOS Kinoite"
 
 variables:
-  variant: "base-atomic"
+  variant: "kinoite"
 
 include:
   - common.yaml
@@ -23,6 +23,11 @@ exclude-packages:
 
 # Kept in the leaf manifest as they are overwritten by Pungi in composes
 repos:
-  - fedora-rawhide
-  # - fedora
-  # - updates
+  - fedora
+  - updates
+  - rpmfusion-nonfree
+  - rpmfusion-nonfree-updates
+  - rpmfusion-free
+  - rpmfusion-free-updates
+  - rpmfusion-nonfree-nvidia-driver
+  - rpmfusion-nonfree-steam

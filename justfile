@@ -22,12 +22,12 @@ pretty_names := '(
 
 # Define a 'release_ver' shortcut for use in recipes
 release_ver := '''
-"$(rpm-ostree compose tree --print-only "silverblue.yaml" | jq -r '."mutate-os-release"')"
+"$(rpm-ostree compose tree --print-only "kinoite.yaml" | jq -r '."mutate-os-release"')"
 '''
 
 # Define a 'is_rawhide' shortcut for use in recipes
 is_rawhide := '''
-"$(rpm-ostree compose tree --print-only "silverblue.yaml" | jq -r '.repos[]')" == "fedora-rawhide"
+"$(rpm-ostree compose tree --print-only "kinoite.yaml" | jq -r '.repos[]')" == "fedora-rawhide"
 '''
 
 # Define a retry function for use in recipes

@@ -8,3 +8,4 @@ include:
   - kinoite-shared.yaml
   - common.yaml
   - packages/kinoite.yaml
+  - packages/nora.yml
