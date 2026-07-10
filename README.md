@@ -4,5 +4,4 @@
 
 **该项目处于未完成状态**。
 
-Upstream: [Manifests for Fedora Atomic Desktops variants](https://forge.fedoraproject.org/atomic-desktops/config.git)ux | An organization aimed at popularizing Linux in China
-
+Upstream: [Manifests for Fedora Atomic Desktops variants](https://forge.fedoraproject.org/atomic-desktops/config.git)
